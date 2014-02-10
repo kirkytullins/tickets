@@ -13,7 +13,7 @@ a[href^="http://"] {color:#000;}
 /*img, img a, .more-link a {border:none;}
 */
 /*Remove Element*/
-#logo, #catnavi, .jumbotron, .topnavi, .more-link, .navigation, #sidebartop, #related, #social, #sponsors, .tabs, #allpost, .toolbar, .splitbox, #commentform, #commentabs .idTabs, .postmeta-content .comments, #respond h3, .tag, .footerlinks {display:none;}
+.navbar-brand, #logo, #catnavi, .jumbotron, .topnavi, .more-link, .navigation, #sidebartop, #related, #social, #sponsors, .tabs, #allpost, .toolbar, .splitbox, #commentform, #commentabs .idTabs, .postmeta-content .comments, #respond h3, .tag, .footerlinks {display:none;}
 
 /*Post*/
 /*.post {border-bottom:1px solid #000;}
@@ -27,9 +27,13 @@ a[href^="http://"] {color:#000;}
 */
 table { page-break-inside : avoid }
 
-#print-content {display:block;}
-#no-print-content {display:none;}
+.print-content {display:block;}
+.no-print-content {display:none;}
 button {display:none;}
+
+header nav, footer { display: none; }
+
+@page { margin: 0.5cm;}
 
 /*Footer*/
 /*#footer {margin-top:10px;}*/

@@ -78,6 +78,11 @@
         border: 5px solid #73afb7;         
     }   
 
+
+.navbar-brand, #logo, #catnavi, .jumbotron, .topnavi, .more-link, .navigation, #sidebartop, #related, #social, #sponsors, .tabs, #allpost, .toolbar, .splitbox, #commentform, #commentabs .idTabs, .postmeta-content .comments, #respond h3, .tag, .footerlinks {display:none;}
+
+    
+
 }
 
 

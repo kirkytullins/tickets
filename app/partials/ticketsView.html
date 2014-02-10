@@ -2,9 +2,9 @@
     <div class="span8">
         <div class="no-print-content"> 
           <button type="submit" ng-click="barcodeGen()" class="btn">Gen Barcode</button>
-          <a title="print screen" alt="print screen" onclick="window.print();" _target = "_blank" style="cursor:pointer;">Print</a>
+          <a title="print screen" onclick="window.print();" _target = "_blank" style="cursor:pointer;">Print</a>
         </div>        
-        <div ng-model="ticket">  
+        <div class="print-content" ng-model="ticket">  
             <div ng-repeat="tnumber in ticket.ticketNumbers">
                 <!-- <li> -->
                 <div id="qrcode" style="display:none;">
@@ -33,6 +33,7 @@
                             <div  style="background:lightgray; width:150px; height:150px">
                                 <img class="qrcode" style="display:block;" src="">
                             </div>
+                            <span style="font-size: 7pt;">{{ ticket.tvalues[5]}}</span>
                         </td>
                     </tr>
                 </table>
