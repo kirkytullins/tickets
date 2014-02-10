@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Kirk Adoniadis">
+
+    <title>Tickets</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" media="screen, print" />
+    <link href="Content/offcanvas.css" rel="stylesheet">
+    <link href="Content/bootstrap-responsive.css" rel="stylesheet" media="screen, print"/>
+    <link href="Content/styles.css" rel="stylesheet" media="screen, print" />
+    <link href="Content/print.css" rel="stylesheet" media="print"/> 
+  
+</head>
+    ui-jq
+    <body ng-app="tickets" style="padding-top:15px;">
+
+        <div id="no-print-content" class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Ticket Generator</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                  </ul>
+                </div><!-- /.nav-collapse -->
+            </div><!-- /.container -->
+        </div><!-- /.navbar -->
+
+        
+        <div class="container">        
+            <div class=="row row-offcanvas row-offcanvas-right">
+            <div class="jumbotron">
+                <h1>Ticket Generator!</h1>
+                <p>This is a simple Ticket generator. Just input some basic information as below and your tickets will be generated on the fly.</p>
+                <p>
+                    <a class="btn btn-lg btn-primary" href="#form" role="button">Click to Start ! &raquo;</a>
+                </p>
+            </div>
+
+            <div id="print-content" class="span8">
+                <div ng-view ng-animate="{enter: 'view-enter', leave: 'view-leave'}">                
+                    <!-- partials go here : formView.html and tichetsView.html-->
+                </div>
+                
+              </div>
+            </div>
+        </div>
+        
+        <script src="Scripts/jquery.min.js"></script>    
+        <script src="Scripts/jquery.barcode.0.3.js"></script>
+        <script src="Scripts/angular.js"></script>
+        <script src="Scripts/bootstrap.js"></script>
+        <script src="Scripts/qrcode.min.js"></script>
+
+        <!-- App libs -->
+        <script src="app/app.js"></script>
+        <script src="app/controllers/controllers.js"></script>
+        <script src="app/services/services.js"></script>    
+    
+    </body>
+</html>

@@ -1,0 +1,15 @@
+
+        <div ng-controller="formController">             
+            <form class="form-search">
+                <div ng-model="ticket"                    
+                    <ul style="list-style:none" ng-repeat="field in ticket.tfields">
+                        <li> 
+                            <div class="fld">{{ field }} </div><input ng-model="ticket.tvalues[$index]" placeholder="{{ field }}" type="text"  class="input-medium search-query">
+                        </li>    
+                    </ul>    
+                </div>    
+            </form>
+            <button type="submit" ng-click="saveTickets()" class="btn">Save Locally</button>
+            <a href="#/generate_it">Generate</a>
+           
+        </div>   

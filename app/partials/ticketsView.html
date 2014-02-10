@@ -1,0 +1,44 @@
+<div class="container" ng-controller="ticketsController">  
+    <div class="span8">
+        <div class="no-print-content"> 
+          <button type="submit" ng-click="barcodeGen()" class="btn">Gen Barcode</button>
+          <a title="print screen" alt="print screen" onclick="window.print();" _target = "_blank" style="cursor:pointer;">Print</a>
+        </div>        
+        <div ng-model="ticket">  
+            <div ng-repeat="tnumber in ticket.ticketNumbers">
+                <!-- <li> -->
+                <div id="qrcode" style="display:none;">
+                    <img src="">
+                </div>
+                <table class="table table-bordered">                    
+                    <tr>
+                        <!-- Repeat the below 2 to have 2 identical columns -->
+                        <td ng-repeat="n in ticket.v_repeat" style="padding-left:50px;border-left:4px dashed #000;">
+                            <span style="font-size:22px;">
+                                <strong>{{ ticket.tvalues[0] }}<br/></strong>
+                            </span>
+                            <span style="font-size:20px;"><i> 
+                                {{ ticket.tvalues[1] }}</i>
+                            </span>
+                            <br/>
+                            <br/>{{ ticket.tvalues[3] }}
+                            <span style="font-size:18px;"> 
+                                <br/><strong>{{ ticket.tvalues[2]}}</strong>
+                                <br/>No <strong>{{ tnumber }}</strong>
+                            </span>
+                            <div class="barcode39" style="width:180px;height:30px;border:1px solid black;">{{ tnumber }}</div>
+                        </td>
+                        <!-- qr code tag -->
+                        <td>
+                            <div  style="background:lightgray; width:150px; height:150px">
+                                <img class="qrcode" style="display:block;" src="">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <!-- </li> -->
+            </div> 
+        </div>
+    </div>
+</div>    
