@@ -1,4 +1,4 @@
-var ticketsApp = angular.module('tickets', []);
+ var ticketsApp = angular.module('tickets', ['ngRoute']);
 
 //This configures the routes and associates each route with a view and a controller
 
